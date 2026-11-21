@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { -webkit-tap-highlight-color: transparent; }
+  body { font-family: Montserrat, Prompt, system-ui, sans-serif; line-height: 1.6; }
+  :focus-visible { outline: 2px solid #c1272f; outline-offset: 2px; }
+  input, select, textarea { font: inherit; }
+}
+@layer components {
+  .card { @apply bg-white rounded-2xl shadow-card border border-line/60; }
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 font-medium transition active:scale-[.98] disabled:opacity-50 disabled:pointer-events-none; }
+  .btn-primary { @apply btn bg-brand-grad text-white shadow-sm hover:brightness-105; }
+  .btn-outline { @apply btn border border-line bg-white text-ink hover:bg-canvas; }
+  .btn-ghost { @apply btn text-ink-muted hover:bg-canvas; }
+  .btn-success { @apply btn bg-emerald-600 text-white hover:bg-emerald-700; }
+  .field { @apply w-full rounded-xl border border-line bg-white px-3.5 py-2.5 text-ink placeholder:text-ink-muted/60 focus:border-brand focus:ring-2 focus:ring-brand/15 outline-none; }
+  .label { @apply block text-sm font-semibold mb-1.5; }
+  .chip { @apply rounded-full border border-line bg-white px-3 py-1.5 text-sm transition; }
+  .chip-on { @apply border-brand bg-brand text-white; }
+  .eyebrow { @apply inline-block rounded-full bg-brand/10 text-brand px-2.5 py-0.5 text-xs font-semibold tracking-wide; }
+}
+.pb-safe { padding-bottom: calc(env(safe-area-inset-bottom) + 72px); }
+@media (min-width: 1024px) { .pb-safe { padding-bottom: 32px; } }
+@media print {
+  .no-print { display: none !important; }
+  body { background: #fff; }
+}

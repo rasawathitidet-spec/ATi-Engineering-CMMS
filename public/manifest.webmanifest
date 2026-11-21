@@ -1,0 +1,1 @@
+{ "name": "ATi แจ้งซ่อม", "short_name": "ATi แจ้งซ่อม", "start_url": "/", "display": "standalone", "background_color": "#f6f7f9", "theme_color": "#c1272f", "icons": [{ "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml" }] }
